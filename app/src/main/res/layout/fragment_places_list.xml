@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".ui.adapters.fragments.PlacesListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/headerFragment"
+            android:src="@drawable/mexican_head"
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            />
+
+        <TextView
+            android:id="@+id/tvUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/email_user"
+            android:textAlignment="center"
+            android:textColor="@color/darkpurple"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="@string/wellcome"
+            android:textAlignment="center"
+            android:textColor="@color/darkpurple"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReenviarVerificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="#440877"
+        android:text="@string/send_email_verif"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:cornerRadius="16dp"
+        android:visibility="gone"
+
+        />
+    </LinearLayout>
+
+
+    <View
+        android:background="@color/darkpurple"
+        android:layout_width="match_parent"
+        android:layout_marginTop="140dp"
+        android:layout_height="2dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/loading_anim"
+        android:indeterminateDuration="2000"
+        />
+    <TextView
+        android:id="@+id/tvConectionError"
+        android:text="@string/conection_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:textColor="@color/darkpurple"
+        android:fontFamily="@font/dimbo"
+        android:textSize="30sp"
+        />
+
+    <ImageView
+        android:id="@+id/ivLele"
+        android:contentDescription="@string/image_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:visibility="invisible"
+        android:src="@drawable/lele"
+        />
+
+    <Button
+        android:id="@+id/btReload"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        android:text="@string/reload" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGames"
+        android:layout_width="match_parent"
+        android:layout_height="595dp"
+        android:layout_marginTop="140dp"
+        android:contentDescription="@string/app_name">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:paddingBottom="12dp"
+        android:gravity="bottom"
+        android:text="@string/logout"
+        android:textColor="@color/white" />
+
+    <ToggleButton
+        android:id="@+id/tbPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/rose"
+        android:textOn="@string/pause"
+        android:textOff="@string/play"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|end"
+        android:paddingHorizontal="15dp"
+        android:layout_margin="16dp"/>
+</FrameLayout>
